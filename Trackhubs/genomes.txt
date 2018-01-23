@@ -1,0 +1,2 @@
+genome susScr3
+trackDb susScr3/tracksDb.txt

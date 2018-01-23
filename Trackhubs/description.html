@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+	<title>Summary Page</title>
+	<style type="text/css">
+    .body {
+      margin: 0 auto;
+      font-family: "adobe-caslon-pro",Times,Georgia,serif;
+      font-size: 1rem;
+      width: 1000px;
+      height: 75px;
+      line-height: 1.5;
+      padding: 10px 10px 10px 10px;
+    }
+    #sites {
+      width: 10%;
+      height: 435px;
+      float: left;
+      text-align: left;
+      padding-left: 92px;
+    }
+    .firstCell{
+      padding-left: 0px !important;
+      }
+    .first{
+      padding-bottom: 0px;
+    }
+    section{
+      width: 85%;
+      height: 435px;
+      padding: 10px;
+    }
+    #isolation{
+      color: black;
+    }
+    #methods{
+      color: black;
+    }
+    #multiwig{
+    	color: black;
+    }
+    table{
+      border-spacing: 0px;
+    }
+  </style>
+</head>
+<body>
+	<h3>Description</h3>
+    <p>
+      These tracks provide DNA methylation levels (RRBS) and normalized raw signal for transcriptome data (stranded RNA-seq) from the adult female Duroc chosen for production of the swine reference genome (Duroc 12-4; <a href="http://www.ncbi.nlm.nih.gov/pubmed/23151582" target="_blank">Groenen et al. 2012</a>). Available as part of the <a href="http://www.faang.org" target = "_blank">FAANG initiative</a>.
+  	</p>
+
+	<h3>Display Conventions and Configuration</h3>
+	<h4>RNA-seq</h4>
+	<p>This track is a multiWig track displaying the signal density normalized based on the density of aligned reads (Read Per Million, RPM). RPM values are reported as the number of reads at a given position divided by the total number of reads divided by one million. This measurement allows for the visualization of the relative amount of a given transcript across multiple samples. Reads aligning to the plus and minus strand are reported separately with the following color scheme.</p>
+  <div class="table">
+    <table style = "width:auto" cellpadding="10px" cellspacing="10px">
+      <tr>
+        <td class="firstCell">Plus Strand</td>
+        <td style="background-color:rgb(0,0,255); height:25px; width:25px; " class="colorBlock"></td>
+      </tr>
+      <tr>
+        <td class="firstCell">Minus Strand</td>
+        <td style="background-color:rgb(255,0,0); height:25px; width:25px; " class="colorBlock"></td>
+      </tr>
+    </table>
+  </div>
+	<h4>DNA methylation</h4>
+	<p style="color:black">This track displays methylation levels for covered CpG sites by default. Non-CpG site methylation can be visualised as an additional subtrack. The methylation status of each CpG and non-CpG site is represented using an 11-color gradient:</p>
+    <div>
+      <table>
+        <tr class="first">
+          <td>0 - 5%</td>
+          <td style="background-color:rgb(0,255,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>5 - 15%</td>
+          <td style="background-color: rgb(55,255,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>15 - 25%</td>
+          <td style="background-color: rgb(105,255,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>25 - 35%</td>
+          <td style="background-color:rgb(155,255,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>35 - 45%</td>
+          <td style="background-color: rgb(205,255,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>45 - 55%</td>
+          <td style ="background-color: rgb(255,255,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>55 - 65%</td>
+          <td style="background-color: rgb(255,205,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>65 - 75%</td>
+          <td style="background-color:rgb(255,155,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>75 - 85%</td>
+          <td style="background-color: rgb(255,105,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td>85 - 95%</td>
+          <td style ="background-color: rgb(255,55,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+        <tr>
+          <td style="padding-right:30px;">95 - 100%</td>
+          <td style="background-color: rgb(255,0,0); height:30px; width:30px; " class="color"></td>
+        </tr>
+      </table>
+    </div>
+    <p style="color:black">
+      The score of this track reports the coverage (i.e. number of reads) at each site. The score has a maximum value of 1000, with all sites covered by more than 1000 reads having a score of 1000. All sites with a minimum of 10 reads are reported. The CpG non-CpG bigBed files contain two extra columns. The first represents the coverage at each site, while the second represents the percentage of reads reporting methylation at the site.
+    </p>
+  <h3>Methods</h3>
+    <p id="methods">
+     <p> DNA methylation and gene transcription were assessed from frozen tissues via reduced representation bisulfite sequencing (RRBS) and TruSeq Stranded RNA-seq, respectively. The female Duroc was 3 years 4 months of age at the time of euthanasia, and all samples were stored at -80<sup>o</sup>C until processing.
+	</p>
+  <h4>DNA & RNA Isolation</h4>
+    <p id="isolation">
+     <p> Genomic DNA and total RNA were extracted simultaneously from frozen tissue using the AllPrep DNA/RNA Mini Kit (Qiagen) following the manufacturer’s protocol. DNA concentrations were determined using a NanoDrop spectrophotometer and DNA quality was assessed by electrophoresis using a 1% agarose gel. RNA concentrations were determined using a NanoDrop spectrophotometer and analyzed by an Agilent 2100 Bioanalyzer using an RNA Nano bioanalyzer chip to determine RNA integrity as well as the presence/absence of gDNA by the <a href="http://www.biotech.uiuc.edu/htdna" target="_blank">HTS lab</a>. Only RNA samples with a RNA integrity number (RIN) greater than 7 were used for sequencing.</p>
+  <h4>
+    RRBS Library Preparation
+  </h4>
+    <p>
+	RRBS library preparation was performed by the <a href="http://www.biotech.uiuc.edu/htdna" target="_blank">HTS lab</a>. High-quality genomic DNA (2 &micro;g) was restriction digested using the methyl-insensitive restriction enzyme Mspl, which cuts the DNA at CCGG sites. The fragments were blunt-ended and phosphorylated, and a single A nucleotide was added to the 3' ends of the fragments in preparation for ligation to a methylated adapter with a single-base T overhang. The ligation products were purified and size-selected (30 - 160 bp) using agarose gel electrophoresis. Size-selected DNA was bisulfite-treated with the EpiTech Bisulfite Kit (Qiagen) and column-purified. The treated DNA was PCR-amplified to enrich for fragments with adapters on both ends. The final libraries were quantified using Qubit (Life Technologies) and the average size was determined on an Agilent bioanalyzer DNA7500 DNA chip (Agilent Technologies) and diluted to 10 nM. The 10 nM dilution was further quantitated by qPCR on an ABI 1900 to ensure high accuracy quantification for consistent pooling of barcoded libraries and maximization of the number of clusters in the Illumina flowcell.
+    </p>
+	<h4>
+    RNA-seq Library Preparation
+  </h4>
+	<p>High-quality RNA (1 &micro;g) was used to generate TruSeq Stranded RNA-seq libraries (TruSeq Stranded RNA Sample Preparation Kit, Illumina) by the <a href="http://www.biotech.uiuc.edu/htdna" target="_blank">HTS lab</a> following standard protocols. The final libraries were quantified using Qubit (Life Technologies) and the average size was determined on an Agilent bioanalyzer DNA7500 DNA chip (Agilent Technologies) and diluted to 10 nM. The 10 nM dilution was further quantitated by qPCR on an ABI 1900 to ensure high accuracy quantification for consistent pooling of barcoded libraries and maximization of the number of clusters in the Illumina flowcell.</p>
+  <h4>
+    Illumina Sequencing
+  </h4>
+    <p>RRBS Illumina sequencing was performed on libraries multiplexed and loaded onto 8-lane flowcells for cluster formation and sequenced on an Illumina HiSeq2000. The libraries were sequenced to a total read length of 100 bp from one end (single-read sequencing, RRBS) or both ends (paired-read sequencing, RNA-seq) of the molecules.</p>
+  <h4>
+    RRBS Data Analysis
+  </h4>
+    <p>
+    Raw reads were trimmed for adapter contamination, minimum quality score (20), experimentally introduced cytosines, and minimum length (20bp) using <a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" target="_blank"> Trim Galore v.0.3.3</a>. An <i>in silico</i> converted reduced representation swine genome with fragment lengths between 20 and 180 bp was produced using the BS-seeker2 v.2.0.5 bs_seeker2-build.py script (<a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=BS-Seeker2%3A+a+versatile+aligning+pipeline+for+bisulfite+sequencing+data" target="_blank">Guo et al. 2013</a>). Trimmed reads were aligned to the <i>in silico</i> converted reduced representation swine genome with BS-seeker2 v.2.0.5 using Bowtie2 v.2.1.0 (<a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=Fast+gapped-read+alignment+with+Bowtie+2" target="_blank">Langmead and Salzberg 2012</a>) in local alignment mode, with a seed length of 20, a maximum of 1 mismatch allowed in the seed alignment, and allowing no more than 2 mismatches/read. Methylation status was determined using the bs_seeker2-call_methylation.py script using only uniquely aligned reads, and all sites covered by a minimum of 10 reads were reported.
+</p>
+	<h4>
+    RNA-seq Data Analysis
+  </h4>
+        <p>Raw reads were trimmed sequentially for adapter contamination, A-tails, minimum quality score (20), and minimum length (20 bp) using <a href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" target="_blank">Trim Galore v.0.3.3</a>. Unpaired reads were retained with a minimum length of 35 bp. Trimmed paired and unpaired reads were aligned to the swine reference genome using Tophat v.2.2.10 (<a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=TopHat2%3A+accurate+alignment+of+transcriptomes+in+the+presence+of+insertions%2C+deletions+and+gene+fusions" target="_blank">Kim et al. 2013</a>). Tophat analysis included a pre-alignment to the reference genome to filter out reads extending the maximum number of alignments (-M option) followed by alignment to the Ensembl swine reference transcriptome (-G) and alignment to the genome. The number of allowed alignment hits (-g option) was 20. Furthermore the --read-realign-edit-dist option was set to 0, the --mate-inner-dist option to 120, the --mate-std-dev option to 260 and included the fr-firststrand option.</p>
+	<h3>
+    Credits
+  </h3>
+        <p>These data were generated by the <a href="http://comparativegenomics.illinois.edu/" target="_blank">Laboratory of Comparative Genomics</a> at the University of Illinois and analysed by the <a href="http://www.wageningenur.nl/en/Expertise-Services/Collaboration-and-partnerships/Animal-Breeding-and-Genomics-Centre.htm" target="_blank">Animal Breeding and Genomics Centre</a> at Wageningen University, The Netherlands. Please direct all questions to <a href="mailto:kschach2@illinois.edu">kschach2@illinois.edu</a> or <a href="mailto:kyle.schachtschneider@wur.nl">kyle.schachtschneider@wur.nl</a>.</p>
+  <h3>
+      References
+  </h3>
+    <ul>
+	<p style="color:black">Schachtschneider KM, Madsen O, Park C, Rund LA, Groenen MAM, Schook LB. <a href="http://www.biomedcentral.com/1471-2164/16/743" target="_blank">Adult porcine genome-wide DNA methylation patterns support pigs as a biomedical model</a>. <i>BMC Genomics</i> 16:743</p>
+    </ul>
+  <h3>
+      Data Availability
+  </h3>
+    <p>
+      Raw reads and aligned bam files are available for download from the European Nucleotide Archive database <a href="http://www.ebi.ac.uk/ena/data/view/PRJEB8784" target = "_blank">(PRJEB8784)</a>.
+    </p><br>
+</body>
+</html>

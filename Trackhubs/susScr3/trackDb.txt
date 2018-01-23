@@ -1,0 +1,510 @@
+track Fat
+superTrack on
+group regulation
+shortLabel Fat
+longLabel Fat DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Fat_RRBS
+	parent Fat
+	compositeTrack on
+	shortLabel Fat RRBS
+	longLabel Fat DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	visibility pack
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Fat_RRBS.html
+
+		track Fat_RRBS_CpG
+		type bigBed 9 +
+		parent Fat_RRBS on
+		bigDataUrl fat_CpG.bb
+		shortLabel Fat CpG
+		longLabel Fat CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Fat_RRBS_non_CpG
+		type bigBed 9 +
+		parent Fat_RRBS off
+		bigDataUrl fat_non_CpG.bb
+		shortLabel Fat Non-CpG
+		longLabel Fat Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Fat_RNA-seq
+	parent Fat
+	container multiWig
+	shortLabel Fat RNA-seq
+	longLabel Fat RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	visibility full
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	windowingFunction mean+whiskers
+	html Fat_RNA-seq.html
+
+		track Fat_plus
+		type bigWig 0 100
+		shortLabel Fat Plus
+		longLabel Fat Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Fat_plus.bigwig
+		parent Fat_RNA-seq
+		color 0,0,255
+
+		track Fat_minus
+		type bigWig 0 -100
+		shortLabel Fat Minus
+	        longLabel Fat Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Fat_minus.bigwig
+	        parent Fat_RNA-seq
+	        color 255,0,0
+
+track Heart
+superTrack on
+group regulation
+shortLabel Heart
+longLabel Heart DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Heart_RRBS
+	parent Heart
+	compositeTrack on
+	visibility pack
+	shortLabel Heart RRBS
+	longLabel Heart DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Heart_RRBS.html
+
+		track Heart_RRBS_CpG
+		type bigBed 9 +
+		parent Heart_RRBS on
+		bigDataUrl heart_CpG.bb
+		shortLabel Heart CpG
+		longLabel Heart CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Heart_RRBS_non_CpG
+		type bigBed 9 +
+		parent Heart_RRBS off
+		bigDataUrl heart_non_CpG.bb
+		shortLabel Heart Non-CpG
+		longLabel Heart Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Heart_RNA-seq
+	parent Heart
+	container multiWig
+	visibility full
+	shortLabel Heart RNA-seq
+	longLabel Heart RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	windowingFunction mean+whiskers
+	html Heart_RNA-seq.html
+
+		track Heart_plus
+		type bigWig 0 100
+		shortLabel Heart Plus
+		longLabel Heart Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Heart_plus.bigwig
+		parent Heart_RNA-seq
+		color 0,0,255
+
+		track Heart_minus
+		type bigWig 0 -100
+		shortLabel Heart Minus
+	        longLabel Heart Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Heart_minus.bigwig
+	        parent Heart_RNA-seq
+		color 255,0,0
+
+track Kidney
+superTrack on
+group regulation
+shortLabel Kidney
+longLabel Kidney DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Kidney_RRBS
+	parent Kidney
+	compositeTrack on
+	visibility pack
+	shortLabel Kidney RRBS
+	longLabel Kidney DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Kidney_RRBS.html
+
+		track Kidney_RRBS_CpG
+		type bigBed 9 +
+		parent Kidney_RRBS on
+		bigDataUrl kidney_CpG.bb
+		shortLabel Kidney CpG
+		longLabel Kidney CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Kidney_RRBS_non_CpG
+		type bigBed 9 +
+		parent Kidney_RRBS off
+		bigDataUrl kidney_non_CpG.bb
+		shortLabel Kidney Non-CpG
+		longLabel Kidney Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Kidney_RNA-seq
+	parent Kidney
+	container multiWig
+	visibility full
+	shortLabel Kidney RNA-seq
+	longLabel Kidney RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	type bigWig
+	windowingFunction mean+whiskers
+	html Kidney_RNA-seq.html
+
+		track Kidney_plus
+		type bigWig 0 100
+		shortLabel Kidney Plus
+		longLabel Kidney Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Kidney_plus.bigwig
+		parent Kidney_RNA-seq
+		color 0,0,255
+
+		track Kidney_minus
+		type bigWig 0 -100
+		shortLabel Kidney Minus
+	        longLabel Kidney Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Kidney_minus.bigwig
+	        parent Kidney_RNA-seq
+	        color 255,0,0
+
+track Liver
+superTrack on show
+group regulation
+shortLabel Liver
+longLabel Liver DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Liver_RRBS
+	parent Liver
+	compositeTrack on
+	visibility pack
+	shortLabel Liver RRBS
+	longLabel Liver DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Liver_RRBS.html
+
+		track Liver_RRBS_CpG
+		type bigBed 9 +
+		parent Liver_RRBS on
+		bigDataUrl liver_CpG.bb
+		shortLabel Liver CpG
+		longLabel Liver CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Liver_RRBS_non_CpG
+		type bigBed 9 +
+		parent Liver_RRBS off
+		bigDataUrl liver_non_CpG.bb
+		shortLabel Liver Non-CpG
+		longLabel Liver Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Liver_RNA-seq
+	parent Liver
+	container multiWig
+	visibility full
+	shortLabel Liver RNA-seq
+	longLabel Liver RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	type bigWig
+	windowingFunction mean+whiskers
+	html Liver_RNA-seq.html
+
+		track Liver_plus
+		type bigWig 0 100
+		shortLabel Liver Plus
+		longLabel Liver Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Liver_plus.bigwig
+		parent Liver_RNA-seq
+		color 0,0,255
+
+		track Liver_minus
+		type bigWig 0 -100
+		shortLabel Liver Minus
+	        longLabel Liver Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Liver_minus.bigwig
+	        parent Liver_RNA-seq
+	        color 255,0,0
+
+track Lung
+superTrack on
+group regulation
+shortLabel Lung
+longLabel Lung DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Lung_RRBS
+	parent Lung
+	compositeTrack on
+	visibility pack
+	shortLabel Lung RRBS
+	longLabel Lung DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Lung_RRBS.html
+
+		track Lung_RRBS_CpG
+		type bigBed 9 +
+		parent Lung_RRBS on
+		bigDataUrl lung_CpG.bb
+		shortLabel Lung CpG
+		longLabel Lung CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Lung_RRBS_non_CpG
+		type bigBed 9 +
+		parent Lung_RRBS off
+		bigDataUrl lung_non_CpG.bb
+		shortLabel Lung Non-CpG
+		longLabel Lung Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Lung_RNA-seq
+	parent Lung
+	container multiWig
+	visibility full
+	shortLabel Lung RNA-seq
+	longLabel Lung RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	type bigWig
+	windowingFunction mean+whiskers
+	html Lung_RNA-seq.html
+
+		track Lung_plus
+		type bigWig 0 100
+		shortLabel Lung Plus
+		longLabel Lung Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Lung_plus.bigwig
+		parent Lung_RNA-seq
+		color 0,0,255
+
+		track Lung_minus
+		type bigWig 0 -100
+		shortLabel Lung Minus
+	        longLabel Lung Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Lung_minus.bigwig
+	        parent Lung_RNA-seq
+	        color 255,0,0
+
+track Lymph_Node
+superTrack on show
+group regulation
+shortLabel Lymph Node
+longLabel Lymph Node DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Lymph_Node_RRBS
+	parent Lymph_Node
+	compositeTrack on
+	visibility pack
+	shortLabel Lymph Node RRBS
+	longLabel Lymph Node DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Lymph_Node_RRBS.html
+
+		track Lymph_Node_RRBS_CpG
+		type bigBed 9 +
+		parent Lymph_Node_RRBS on
+		bigDataUrl lymph_node_CpG.bb
+		shortLabel Lymph Node CpG
+		longLabel Lymph Node CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Lymph_Node_RRBS_non_CpG
+		type bigBed 9 +
+		parent Lymph_Node_RRBS off
+		bigDataUrl lymph_node_non_CpG.bb
+		shortLabel Lymph Node NonCpG
+		longLabel Lymph Node Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Lymph_Node_RNA-seq
+	parent Lymph_Node
+	container multiWig
+	visibility full
+	shortLabel Lymph Node RNAseq
+	longLabel Lymph Node RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	type bigWig
+	windowingFunction mean+whiskers
+	html Lymph_Node_RNA-seq.html
+
+		track Lymph_Node_plus
+		type bigWig 0 100
+		shortLabel Lymph Node Plus
+		longLabel Lymph Node Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Lymph_Node_plus.bigwig
+		parent Lymph_Node_RNA-seq
+		color 0,0,255
+
+		track Lymph_Node_minus
+		type bigWig 0 -100
+		shortLabel Lymph Node Minus
+	        longLabel Lymph Node Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Lymph_Node_minus.bigwig
+	        parent Lymph_Node_RNA-seq
+	        color 255,0,0
+
+track Muscle
+superTrack on
+group regulation
+shortLabel Muscle
+longLabel Muscle DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Muscle_RRBS
+	parent Muscle
+	compositeTrack on
+	visibility pack
+	shortLabel Muscle RRBS
+	longLabel Muscle DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Muscle_RRBS.html
+
+		track Muscle_RRBS_CpG
+		type bigBed 9 +
+		parent Muscle_RRBS on
+		bigDataUrl muscle_CpG.bb
+		shortLabel Muscle CpG
+		longLabel Muscle CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Muscle_RRBS_non_CpG
+		type bigBed 9 +
+		parent Muscle_RRBS off
+		bigDataUrl muscle_non_CpG.bb
+		shortLabel Muscle Non-CpG
+		longLabel Muscle Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Muscle_RNA-seq
+	parent Muscle
+	container multiWig
+	visibility full
+	shortLabel Muscle RNA-seq
+	longLabel Muscle RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	type bigWig
+	windowingFunction mean+whiskers
+	html Muscle_RNA-seq.html
+
+		track Muscle_plus
+		type bigWig 0 100
+		shortLabel Muscle Plus
+		longLabel Muscle Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Muscle_plus.bigwig
+		parent Muscle_RNA-seq
+		color 0,0,255
+
+		track Muscle_minus
+		type bigWig 0 -100
+		shortLabel Muscle Minus
+	        longLabel Muscle Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Muscle_minus.bigwig
+	        parent Muscle_RNA-seq
+	        color 255,0,0
+
+track Spleen
+superTrack on show
+group regulation
+shortLabel Spleen
+longLabel Spleen DNA Methylation and Gene Expression Levels from TJ Tabasco
+
+	track Spleen_RRBS
+	parent Spleen
+	compositeTrack on
+	visibility pack
+	shortLabel Spleen RRBS
+	longLabel Spleen DNA Methylation Levels From TJ Tabasco
+	type bigBed 9 +
+	exonArrows off
+	itemRgb on
+	allButtonPair on
+	html Spleen_RRBS.html
+
+		track Spleen_RRBS_CpG
+		type bigBed 9 +
+		parent Spleen_RRBS on
+		bigDataUrl spleen_CpG.bb
+		shortLabel Spleen CpG
+		longLabel Spleen CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+		track Spleen_RRBS_non_CpG
+		type bigBed 9 +
+		parent Spleen_RRBS off
+		bigDataUrl spleen_non_CpG.bb
+		shortLabel Spleen Non-CpG
+		longLabel Spleen Non-CpG Methylation Levels From TJ Tabasco
+		labelOnFeature on
+
+	track Spleen_RNA-seq
+	parent Spleen
+	container multiWig
+	visibility full
+	shortLabel Spleen RNA-seq
+	longLabel Spleen RNA-seq Raw Signal From TJ Tabasco
+	type bigWig
+	viewLimits -100:100
+	aggregate solidOverlay
+	showSubtrackColorOnUi on
+	type bigWig
+	windowingFunction mean+whiskers
+	html Spleen_RNA-seq.html
+
+		track Spleen_plus
+		type bigWig 0 100
+		shortLabel Spleen Plus
+		longLabel Spleen Plus Strand RNA-seq Raw Signal From TJ Tabasco
+		bigDataUrl Spleen_plus.bigwig
+		parent Spleen_RNA-seq
+		color 0,0,255
+
+		track Spleen_minus
+		type bigWig 0 -100
+		shortLabel Spleen Minus
+	        longLabel Spleen Minus Strand RNA-seq Raw Signal From TJ Tabasco
+	        bigDataUrl Spleen_minus.bigwig
+	        parent Spleen_RNA-seq
+	        color 255,0,0
+

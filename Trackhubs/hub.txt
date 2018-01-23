@@ -1,0 +1,7 @@
+track TJ_Tabasco_hub
+type bigBed
+shortLabel TJ Tabasco hub
+longLabel DNA methylation levels of TJ Tabasco
+bigDataUrl
+genomesFile genomes.txt
+
